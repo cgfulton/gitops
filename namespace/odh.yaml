@@ -1,1 +1,7 @@
-opendatahub
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: odh
+spec:
+  finalizers:
+  - kubernetes
