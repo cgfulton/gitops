@@ -10,49 +10,5 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCD
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: >
-      {"apiVersion":"argoproj.io/v1alpha1","kind":"ArgoCD","metadata":{"annotations":{},"finalizers":["argoproj.io/finalizer"],"name":"argocd-odh","namespace":"odh"},"spec":{"dex":{},"grafana":{"enabled":false,"ingress":{"enabled":false},"route":{"enabled":false}},"ha":{"enabled":false},"initialSSHKnownHosts":{},"prometheus":{"enabled":false,"ingress":{"enabled":false},"route":{"enabled":false}},"rbac":{},"repo":{},"resourceExclusions":"-
-      apiGroups:\n  - tekton.dev\n  clusters:\n  - '*'\n  kinds:\n  - TaskRun\n 
-      -
-      PipelineRun\n","server":{"autoscale":{"enabled":false},"grpc":{"ingress":{"enabled":false}},"ingress":{"enabled":false},"route":{"enabled":true},"service":{"type":""}}}}
-  name: argocd-odh
+  name: agrocd-odh
   namespace: odh
-  finalizers:
-    - argoproj.io/finalizer
-spec:
-  server:
-    autoscale:
-      enabled: false
-    grpc:
-      ingress:
-        enabled: false
-    ingress:
-      enabled: false
-    route:
-      enabled: true
-    service:
-      type: ''
-  grafana:
-    enabled: false
-    ingress:
-      enabled: false
-    route:
-      enabled: false
-  prometheus:
-    enabled: false
-    ingress:
-      enabled: false
-    route:
-      enabled: true
-  resourceExclusions: |
-    - apiGroups:
-      - tekton.dev
-      clusters:
-      - '*'
-      kinds:
-      - TaskRun
-      - PipelineRun
-  dex: {}
-  ha:
-    enabled: false
