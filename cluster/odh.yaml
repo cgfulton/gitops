@@ -1,0 +1,56 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: odh
+spec:
+  finalizers:
+  - kubernetes
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: argocd-odh
+  namespace: odh
+  namespace: openshift-gitops
+  finalizers:
+    - argoproj.io/finalizer
+spec:
+  server:
+    autoscale:
+      enabled: false
+    grpc:
+      ingress:
+        enabled: false
+    ingress:
+      enabled: false
+    route:
+      enabled: true
+    service:
+      type: ''
+  grafana:
+    enabled: false
+    ingress:
+      enabled: false
+    route:
+      enabled: false
+  prometheus:
+    enabled: false
+    ingress:
+      enabled: false
+    route:
+      enabled: false
+  initialSSHKnownHosts: {}
+  rbac: {}
+  repo: {}
+  resourceExclusions: |
+    - apiGroups:
+      - tekton.dev
+      clusters:
+      - '*'
+      kinds:
+      - TaskRun
+      - PipelineRun
+  dex: {}
+  ha:
+    enabled: false
