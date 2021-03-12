@@ -13,8 +13,8 @@ spec:
     directory:
       recurse: true
     path: odh
-    repoURL: https://gitlab.consulting.redhat.com/gfulton/xray-demo-gitops.git
-    targetRevision: gitops
+    repoURL: https://github.com/cgfulton/gitops.git
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
