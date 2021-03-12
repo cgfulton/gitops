@@ -9,9 +9,17 @@ This repository contains a brief Getting Started guide for trying out the xray d
 * [Additional Argo CD instances](#additional-argo-cd-instances)
 
 ## Install OpenShift GitOps
+Log into OpenShift Console as a cluster admin:
+```console
+oc login -u <username> -p <password> <url>
+```
 
-Log into OpenShift Console as a cluster admin.
+Build and validate kustomization target from a URL:
+```console
+kustomize build <url>
+```
 
-```sh
-
+Apply resources from a URL containing kustomization.yaml:
+```console
+oc apply -k <url>
 ```
