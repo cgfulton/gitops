@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: openshift-gitops
+name: odh
+namespace: odh
 resources:
-  - odh-instance.yaml
-  - odh-namespace.yaml
-  - odh-subscription.yaml
-
+- odh-instance.yaml
+- odh-namespace.yaml
+- odh-subscription.yaml
