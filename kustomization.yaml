@@ -2,5 +2,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: openshift-gitops
 resources:
-  - gitops/odh
-  - gitops/xray-demo
+  - ./gitops/odh
+  - ./gitops/xray-demo
