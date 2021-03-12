@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: common
+  name: xray-demo-common
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
