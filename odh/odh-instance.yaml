@@ -4,6 +4,7 @@ kind: KfDef
 metadata:
   annotations:
     kfctl.kubeflow.io/force-delete: 'false'
+    argocd.argoproj.io/sync-wave: "1"
   name: opendatahub
   namespace: odh
 spec:
