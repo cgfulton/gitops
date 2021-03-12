@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: odh-argocd-app
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: odh
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: odh
+    repoURL: https://gitlab.consulting.redhat.com/gfulton/xray-demo-gitops.git
+    targetRevision: gitops
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
