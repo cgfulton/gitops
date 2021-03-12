@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCD
 metadata:
-  name: openshift-gitops-argocd
+  name: gitops-argocd
   namespace: openshift-gitops
 spec:
   server:
