@@ -16,7 +16,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: subscriptions
+    path: openshift-gitops/subscriptions
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
