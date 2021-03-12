@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: openshift-gitops
 bases:
-  - https://github.com/cgfulton/gitops/gitops/openshift-gitops?ref=main
-  - https://github.com/cgfulton/gitops/gitops/odh?ref=main
-  - https://github.com/cgfulton/gitops/gitops/xray-demo?ref=main
+  - https://github.com/cgfulton/gitops/openshift-gitops/subscriptions?ref=main
+  - https://github.com/cgfulton/gitops/odh?ref=main
+  - https://github.com/cgfulton/gitops/xray-demo/common?ref=main

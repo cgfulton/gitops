@@ -24,3 +24,9 @@ Apply resources from a URL containing kustomization.yaml:
 oc apply -k <url>
 ```
 
+## Log into Argo CD dashboard
+Argo CD upon installation generates an initial password for the username admin which is stored in a Kubernetes secret. 
+Run the following command to decrypt the admin password:
+```
+oc get secret argocd-cluster-cluster -n openshift-gitops -ojsonpath='{.data.admin\.password}' | base64 -d
+```

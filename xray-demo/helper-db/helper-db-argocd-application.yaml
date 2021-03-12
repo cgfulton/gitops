@@ -16,7 +16,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/helper-db
+    path: helper-db
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
