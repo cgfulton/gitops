@@ -2,21 +2,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: odh-app
+  name: subscriptions
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   destination:
-    namespace: odh
+    namespace: openshift-operators
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       recurse: true
-    path: odh
+    path: subscriptions
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
