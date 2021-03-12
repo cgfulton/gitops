@@ -23,3 +23,4 @@ Apply resources from a URL containing kustomization.yaml:
 ```console
 oc apply -k <url>
 ```
+
