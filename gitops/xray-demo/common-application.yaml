@@ -2,21 +2,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: subscriptions
+  name: common
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   destination:
-    namespace: openshift-operators
+    namespace: xray-demo
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       recurse: true
-    path: subscriptions
+    path: xray-demo/common
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

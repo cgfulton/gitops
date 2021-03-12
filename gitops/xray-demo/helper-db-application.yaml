@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: common
+  name: helper-db
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,13 +10,13 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
 spec:
   destination:
-    namespace: common
+    namespace: xray-demo
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       recurse: true
-    path: xray-demo/common
+    path: xray-demo/helper-db
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
