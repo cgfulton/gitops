@@ -5,5 +5,4 @@ resources:
   - odh-application.yaml
   - odh-instance.yaml
   - odh-namespace.yaml
-  - odh-subscription.yaml
 
