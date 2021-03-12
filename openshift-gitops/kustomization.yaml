@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - openshift-gitops-argocd.yaml
-  - odh-argocd-app.yaml
+  - openshift-operators.yaml
+  - odh-app.yaml
 
 #  - singleuserprofiles-configmap.yaml

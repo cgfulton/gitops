@@ -2,8 +2,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: odh-argocd-app
+  name: odh-app
   namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: odh
@@ -16,6 +18,9 @@ spec:
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
