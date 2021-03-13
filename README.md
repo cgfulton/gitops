@@ -19,6 +19,12 @@ Build and validate kustomization target from a URL:
 oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift-gitops-subscription.yaml
 ```
 
+Elevate `argocd-cluster-argocd-application-controller` to cluster-admin in the xray-demo namespace:
+```console
+oc adm policy add-cluster-role-to-user cluster-admin \
+       system:serviceaccount:openshift-gitops:argocd-cluster-argocd-application-controller -n xray-demo
+```
+
 ## Log into Argo CD dashboard
 Argo CD generates an initial admin password:
 ```console
