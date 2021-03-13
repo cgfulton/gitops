@@ -1,5 +1,5 @@
 resources:
-- xray-demo-common-namespace.yaml
-- xray-demo-common-buckets-configmap.yaml
-- xray-demo-common-s3-secret.yaml
-- xray-demo-common-service-point-configmap.yaml
+- common-namespace.yaml
+- common-buckets-configmap.yaml
+- common-s3-secret.yaml
+- common-service-point-configmap.yaml

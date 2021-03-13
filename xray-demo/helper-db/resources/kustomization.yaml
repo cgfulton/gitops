@@ -1,5 +1,5 @@
 resources:
-- xray-demo-helper-db-dc.yaml
-- xray-demo-helper-db-pvc.yaml
-- xray-demo-helper-db-secret.yaml
-- xray-demo-helper-db-service.yaml
+- helper-db-dc.yaml
+- helper-db-pvc.yaml
+- helper-db-secret.yaml
+- helper-db-service.yaml
