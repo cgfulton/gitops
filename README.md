@@ -19,6 +19,21 @@ Build and validate kustomization target from a URL:
 oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/gitops-subscription.yaml
 ```
 
+## Log into Argo CD dashboard
+Argo CD generates an initial admin password:
+```console
+oc get secret argocd-cluster-cluster -n openshift-gitops -ojsonpath='{.data.admin\.password}' | base64 -d
+```
+
+Get the Argo CD route:
+```console
+oc get route argocd-cluster-server
+```
+
+Log into Argo CD with `admin` username and the password retrieved from the previous step.
+
+## Deploy XRay Demo
+
 Build and validate kustomization target from a URL:
 ```console
 kustomize build https://github.com/cgfulton/gitops.git
@@ -29,9 +44,4 @@ Apply resources from a URL containing kustomization.yaml:
 oc apply -k https://github.com/cgfulton/gitops.git
 ```
 
-## Log into Argo CD dashboard
-Argo CD upon installation generates an initial password for the username admin which is stored in a Kubernetes secret. 
-Run the following command to decrypt the admin password:
-```
-oc get secret argocd-cluster-cluster -n openshift-gitops -ojsonpath='{.data.admin\.password}' | base64 -d
-```
+Looking at the Argo CD dashboard, you would notice that Argo CD applications.
