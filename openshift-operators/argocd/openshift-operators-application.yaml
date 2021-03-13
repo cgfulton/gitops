@@ -10,7 +10,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
 spec:
   destination:
-    namespace: openshift-operators
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: default
   source:
