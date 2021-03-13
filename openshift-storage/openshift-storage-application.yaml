@@ -16,7 +16,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: openshift-storage/resources
+    path: openshift-storage
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

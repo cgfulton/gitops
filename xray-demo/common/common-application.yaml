@@ -16,7 +16,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/common/resources
+    path: xray-demo/common
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

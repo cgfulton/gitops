@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - odh-instance.yaml
 - odh-namespace.yaml
+- odh-application.yaml
