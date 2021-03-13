@@ -14,7 +14,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: openshift-serverless/argocd
+    path: openshift-serverless/resources
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
