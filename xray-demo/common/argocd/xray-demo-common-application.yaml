@@ -16,7 +16,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/common
+    path: xray-demo/common/argocd
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

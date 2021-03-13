@@ -8,4 +8,4 @@ resources:
   - ./openshift-operators/argocd
   - ./odh/argocd
   - ./xray-demo/common/argocd
-  - ./xray-demo/helper-db/argocd
+#  - ./xray-demo/helper-db/argocd
