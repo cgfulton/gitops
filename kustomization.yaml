@@ -6,4 +6,5 @@ bases:
   - https://github.com/cgfulton/gitops/openshift-serverless/argocd?ref=main
   - https://github.com/cgfulton/gitops/openshift-storage/argocd?ref=main
   - https://github.com/cgfulton/gitops/xray-demo/common/argocd?ref=main
+  - https://github.com/cgfulton/gitops/xray-demo/kafka/argocd?ref=main
 #  - https://github.com/cgfulton/gitops/xray-demo/helper-db/argocd?ref=main
