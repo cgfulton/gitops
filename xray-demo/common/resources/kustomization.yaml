@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- xray-demo-common-namespace.yaml
+- xray-demo-common-buckets-configmap.yaml
+- xray-demo-common-s3-secret.yaml
+- xray-demo-common-service-point-configmap.yaml

@@ -1,14 +1,14 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
+  name: serverless-operator
+  namespace: openshift-serverless
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
-  name: ocs-operator
-  namespace: openshift-storage
+    argocd.argoproj.io/sync-wave: "1"
 spec:
-  channel: stable-4.6
+  channel: '4.7'
   installPlanApproval: Automatic
-  name: ocs-operator
+  name: serverless-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: ocs-operator.v4.6.3
+  startingCSV: serverless-operator.v1.13.0

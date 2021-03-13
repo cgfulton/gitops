@@ -16,7 +16,7 @@ oc login -u opentlc-mgr -p r3dh4t1! <url>
 
 Build and validate kustomization target from a URL:
 ```console
-oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/gitops-subscription.yaml
+oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift-gitops-subscription.yaml
 ```
 
 ## Log into Argo CD dashboard
