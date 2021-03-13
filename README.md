@@ -11,7 +11,7 @@ This repository contains a brief Getting Started guide for trying out the xray d
 ## Install OpenShift GitOps
 Log into OpenShift Console as a cluster admin:
 ```console
-oc login -u <username> -p <password> <url>
+oc login -u opentlc-mgr -p r3dh4t1! <url>
 ```
 
 Build and validate kustomization target from a URL:
