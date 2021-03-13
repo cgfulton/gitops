@@ -4,5 +4,4 @@ resources:
 - serverless-subscription.yaml
 - ocs-subscription.yaml
 - odh-subscription.yaml
-- openshift-gitops-subscription.yaml
 - subscriptions-application.yaml

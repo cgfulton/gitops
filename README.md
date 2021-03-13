@@ -16,6 +16,11 @@ oc login -u <username> -p <password> <url>
 
 Build and validate kustomization target from a URL:
 ```console
+apply -f build https://github.com/cgfulton/gitops/gitops-subscription.yaml?main
+```
+
+Build and validate kustomization target from a URL:
+```console
 kustomize build <url>
 ```
 
