@@ -1,2 +1,2 @@
 resources:
-- odh-subscription.yaml
+  - odh-subscription.yaml

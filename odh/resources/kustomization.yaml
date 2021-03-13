@@ -1,4 +1,4 @@
 resources:
   - odh-instance.yaml
-  - odh-openshift-serverless-namespace.yaml
+  - odh-namespace.yaml
 
