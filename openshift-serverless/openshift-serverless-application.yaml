@@ -1,0 +1,27 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-serverless
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  destination:
+    namespace: openshift-serverless
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: openshift-serverless
+    repoURL: https://github.com/cgfulton/gitops.git
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - Validate=true
+    automated:
+      prune: true
+      selfHeal: true
