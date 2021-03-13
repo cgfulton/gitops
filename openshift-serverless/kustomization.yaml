@@ -4,3 +4,4 @@ namespace: openshift-serverless
 resources:
 - openshift-serverless-application.yaml
 - serverless-subscription.yaml
+- namespace.yaml
