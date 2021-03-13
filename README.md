@@ -6,7 +6,6 @@ This repository contains a brief Getting Started guide for trying out the xray d
 * [Log into Argo CD dashboard](#log-into-argo-cd-dashboard)
 * [Configure OpenShift with Argo CD](#configure-openshift-with-argo-cd)
 * [Deploy Applications with Argo CD](#deploy-applications-with-argo-cd)
-* [Additional Argo CD instances](#additional-argo-cd-instances)
 
 ## Install OpenShift GitOps
 Log into OpenShift Console as a cluster admin:
@@ -14,7 +13,7 @@ Log into OpenShift Console as a cluster admin:
 oc login -u opentlc-mgr -p r3dh4t1! <url>
 ```
 
-Build and validate kustomization target from a URL:
+Install openshift-gitops-subscription:
 ```console
 oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift-gitops-subscription.yaml
 ```
@@ -50,4 +49,4 @@ Apply resources from a URL containing kustomization.yaml:
 oc apply -k https://github.com/cgfulton/gitops.git
 ```
 
-Looking at the Argo CD dashboard, you would notice that Argo CD applications.
+Looking at the Argo CD dashboard, you would notice that XRay Demo application is deploying.
