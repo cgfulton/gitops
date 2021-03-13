@@ -16,17 +16,17 @@ oc login -u <username> -p <password> <url>
 
 Build and validate kustomization target from a URL:
 ```console
-apply -f build https://github.com/cgfulton/gitops/gitops-subscription.yaml?main
+oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/gitops-subscription.yaml
 ```
 
 Build and validate kustomization target from a URL:
 ```console
-kustomize build <url>
+kustomize build https://github.com/cgfulton/gitops.git
 ```
 
 Apply resources from a URL containing kustomization.yaml:
 ```console
-oc apply -k <url>
+oc apply -k https://github.com/cgfulton/gitops.git
 ```
 
 ## Log into Argo CD dashboard
