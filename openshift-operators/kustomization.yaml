@@ -1,0 +1,5 @@
+resources:
+- amq-streams-subscription.yaml
+- odh-subscription.yaml
+- openshift-operators-application.yaml
+- strimzi-kafka-operator-subscription.yaml

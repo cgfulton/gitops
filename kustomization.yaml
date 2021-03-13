@@ -1,10 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
-  - https://github.com/cgfulton/gitops/odh/argocd?ref=main
-  - https://github.com/cgfulton/gitops/openshift-operators/argocd?ref=main
-  - https://github.com/cgfulton/gitops/openshift-serverless/argocd?ref=main
-  - https://github.com/cgfulton/gitops/openshift-storage/argocd?ref=main
-  - https://github.com/cgfulton/gitops/xray-demo/common/argocd?ref=main
-  - https://github.com/cgfulton/gitops/xray-demo/kafka/argocd?ref=main
-  - https://github.com/cgfulton/gitops/xray-demo/helper-db/argocd?ref=main
+  - https://github.com/cgfulton/gitops.git?ref=main
+resources:
+  - ./odh/odh-application.yaml
+  - ./openshift-operators/openshift-operators-application.yaml
+  - ./openshift-serverless/openshift-serverless-application.yaml
+  - ./openshift-storage/openshift-storage-application.yaml
+  - ./xray-demo/common/common-application.yaml
+  - ./xray-demo/kafka/kafka-application.yaml
+  - ./xray-demo/helper-db/helper-db-application.yaml

@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: kafdrop
   namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   selector:
     app: kafdrop

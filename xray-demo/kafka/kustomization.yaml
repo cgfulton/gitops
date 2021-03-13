@@ -2,3 +2,4 @@ resources:
   - kafdrop-dc.yaml
   - kafdrop-route.yaml
   - kafdrop-service.yaml
+  - kafka-application.yaml

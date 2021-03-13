@@ -3,6 +3,8 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: kafdrop
   namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   subdomain: ''
   to:

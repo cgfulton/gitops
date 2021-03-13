@@ -3,3 +3,4 @@ resources:
 - common-buckets-configmap.yaml
 - common-s3-secret.yaml
 - common-service-point-configmap.yaml
+- common-application.yaml
