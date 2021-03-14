@@ -6,6 +6,6 @@ resources:
   - ./openshift-operators/openshift-operators-application.yaml
   - ./openshift-serverless/openshift-serverless-application.yaml
   - ./openshift-storage/openshift-storage-application.yaml
-#  - ./xray-demo/common/common-application.yaml
-#  - ./xray-demo/kafka/kafka-application.yaml
-#  - ./xray-demo/helper-db/helper-db-application.yaml
+  - ./xray-demo/common/common-application.yaml
+  - ./xray-demo/kafka/kafka-application.yaml
+  - ./xray-demo/helper-db/helper-db-application.yaml
