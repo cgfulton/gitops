@@ -1,4 +1,0 @@
-resources:
-- openshift-storage-subscription.yaml
-- openshift-storage-namespace.yaml
-- openshift-storage-application.yaml

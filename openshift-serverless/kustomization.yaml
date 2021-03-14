@@ -1,4 +1,0 @@
-resources:
-- openshift-serverless-subscription.yaml
-- openshift-serverless-namespace.yaml
-- openshift-serverless-application.yaml
