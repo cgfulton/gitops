@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ./odh/odh-application.yaml
+  - ./openshift-gitops/openshift-gitops-application.yaml
   - ./openshift-operators/openshift-operators-application.yaml
   - ./openshift-serverless/openshift-serverless-application.yaml
   - ./openshift-storage/openshift-storage-application.yaml
