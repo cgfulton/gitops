@@ -13,9 +13,9 @@ Log into OpenShift Console as a cluster admin:
 oc login -u opentlc-mgr -p r3dh4t1! <url>
 ```
 
-Install openshift-gitops-subscription:
+Bootstrap the process by installing openshift-gitops:
 ```console
-oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift-gitops/openshift-gitops-subscription.yaml
+kustomize build https://github.com/cgfulton/gitops/openshift-gitops/resources?ref=main | oc apply -f-
 ```
 
 Elevate `argocd-cluster-argocd-application-controller` to cluster-admin in the xray-demo namespace:
