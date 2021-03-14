@@ -1,3 +1,4 @@
 resources:
-- openshift-serverless-namespace.yaml
-- openshift-serverless-subscription.yaml
+  - openshift-serverless-namespace.yaml
+  - openshift-serverless-operator-group.yaml
+  - openshift-serverless-subscription.yaml
