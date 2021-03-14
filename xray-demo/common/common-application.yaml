@@ -6,8 +6,6 @@ metadata:
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   destination:
     namespace: openshift-gitops
@@ -16,7 +14,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/common
+    path: xray-demo/common/resources
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
