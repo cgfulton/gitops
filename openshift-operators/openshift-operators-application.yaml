@@ -16,7 +16,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: openshift-operators
+    path: openshift-operators/resources
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
