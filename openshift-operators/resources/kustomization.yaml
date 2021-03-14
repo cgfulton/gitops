@@ -1,4 +1,4 @@
 resources:
-- amq-streams-subscription.yaml
+#- amq-streams-subscription.yaml
 - odh-subscription.yaml
 - strimzi-kafka-operator-subscription.yaml
