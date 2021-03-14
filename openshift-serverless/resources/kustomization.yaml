@@ -1,0 +1,3 @@
+resources:
+- openshift-serverless-namespace.yaml
+- openshift-serverless-subscription.yaml
