@@ -16,7 +16,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/kafka
+    path: xray-demo/kafka/resources
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
