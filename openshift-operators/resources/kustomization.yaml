@@ -1,4 +1,5 @@
 resources:
-#- amq-streams-subscription.yaml
+- amq-streams-subscription.yaml
+- kogito-subscription.yaml
 - odh-subscription.yaml
 - strimzi-kafka-operator-subscription.yaml
