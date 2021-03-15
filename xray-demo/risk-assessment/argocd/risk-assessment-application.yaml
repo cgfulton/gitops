@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: risk-assessment
+  name: xray-demo-risk-assessment
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
