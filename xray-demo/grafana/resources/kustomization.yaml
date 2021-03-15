@@ -1,2 +1,2 @@
 resources:
-- grafana-operator-subscription.yaml
+  - grafana-operator-subscription.yaml

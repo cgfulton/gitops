@@ -1,5 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: openshift-gitops
 resources:
   - ./odh/argocd/odh-application.yaml
   - ./openshift-gitops/argocd/openshift-gitops-application.yaml
@@ -13,4 +14,4 @@ resources:
   - ./xray-demo/image-server/argocd/image-server-application.yaml
   - ./xray-demo/image-generator/argocd/image-generator-application.yaml
   - ./xray-demo/risk-assessment/argocd/risk-assessment-application.yaml
-  - ./xray-demo/grafana/argocd/grafana-application.yaml
+#  - ./xray-demo/grafana/argocd/grafana-application.yaml
