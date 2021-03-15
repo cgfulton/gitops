@@ -2,5 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: xray-source-config
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 data:
   xray-s3-source: 'https://s3.us-east-1.amazonaws.com/com.redhat.csds.guimou.xray-source'

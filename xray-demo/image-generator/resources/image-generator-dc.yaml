@@ -2,6 +2,9 @@ kind: DeploymentConfig
 apiVersion: apps.openshift.io/v1
 metadata:
   name: image-generator
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   replicas: 1
   revisionHistoryLimit: 3

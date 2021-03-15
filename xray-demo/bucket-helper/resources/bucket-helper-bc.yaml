@@ -3,6 +3,8 @@ apiVersion: build.openshift.io/v1
 metadata:
   name: bucket-helper
   namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   nodeSelector: null
   output:

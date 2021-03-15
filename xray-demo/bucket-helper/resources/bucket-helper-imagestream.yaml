@@ -3,6 +3,8 @@ kind: ImageStream
 metadata:
   name: bucket-helper
   namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   lookupPolicy:
     local: true
