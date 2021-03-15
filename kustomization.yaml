@@ -10,3 +10,4 @@ resources:
   - ./xray-demo/kafka/kafka-application.yaml
   - ./xray-demo/helper-db/helper-db-application.yaml
   - ./xray-demo/bucket-helper/bucket-helper-application.yaml
+  - ./xray-demo/image-server/image-server-application.yaml

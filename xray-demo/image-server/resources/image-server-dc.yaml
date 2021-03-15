@@ -1,0 +1,109 @@
+kind: DeploymentConfig
+apiVersion: apps.openshift.io/v1
+metadata:
+  name: image-server
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  template:
+    metadata:
+      labels:
+        name: image-server
+    spec:
+      containers:
+        - name: image-server
+          image: image-server:latest
+          env:
+            - name: database-user
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key:  database-user
+            - name: database-password
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key:  database-password
+            - name: database-host
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key:  database-host
+            - name: database-db
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key:  database-db
+            - name: service_point
+              valueFrom:
+                configMapKeyRef:
+                  name: service-point
+                  key: url-external
+            - name: bucket-base-name
+              valueFrom:
+                configMapKeyRef:
+                  name: buckets-config
+                  key: bucket-base-name
+          ports:
+            - containerPort: 5000
+          resources:
+            limits:
+                cpu: 500m
+                memory: 100M
+            requests:
+              cpu: 200m
+              memory: 50M
+          imagePullPolicy: IfNotPresent
+      initContainers:
+        - name: bucket-helper
+          image: bucket-helper:latest
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: s3-secret
+                  key: AWS_ACCESS_KEY_ID
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: s3-secret
+                  key: AWS_SECRET_ACCESS_KEY
+            - name: APP_S3_ENDPOINT_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: service-point
+                  key: url
+            - name: APP_S3_BUCKET_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: buckets-config
+                  key: bucket-base-name
+            - name: APP_S3_BUCKET_PUBLIC
+              value: 'true'
+            - name: APP_S3_BUCKET_TOPIC_NAME
+              value: xray-images
+            - name: APP_S3_BUCKET_TOPIC_PUSH_ENDPOINT
+              value: 'kafka://my-cluster-kafka-bootstrap.xray-demo:9092'
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  triggers:
+    - type: ImageChange
+      imageChangeParams:
+        automatic: true
+        containerNames:
+        - image-server
+        from:
+          kind: ImageStreamTag
+          name: image-server:latest
+    - type: ImageChange
+      imageChangeParams:
+        automatic: true
+        containerNames:
+        - bucket-helper
+        from:
+          kind: ImageStreamTag
+          name: bucket-helper:latest
+    - type: ConfigChange
