@@ -2,6 +2,9 @@ apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
   name: image-server
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   lookupPolicy:
     local: true

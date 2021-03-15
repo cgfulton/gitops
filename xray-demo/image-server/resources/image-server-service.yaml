@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: image-server
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   ports:
     - protocol: TCP

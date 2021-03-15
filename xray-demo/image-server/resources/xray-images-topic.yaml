@@ -4,6 +4,9 @@ metadata:
   name: xray-images
   labels:
     strimzi.io/cluster: my-cluster
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   partitions: 5
   replicas: 1
