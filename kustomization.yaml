@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: openshift-gitops
 resources:
   - ./odh/argocd/odh-application.yaml
-  - ./openshift-gitops/argocd/openshift-gitops-application.yaml
   - ./openshift-operators/argocd/openshift-operators-application.yaml
   - ./openshift-serverless/argocd/openshift-serverless-application.yaml
   - ./openshift-storage/argocd/openshift-storage-application.yaml
