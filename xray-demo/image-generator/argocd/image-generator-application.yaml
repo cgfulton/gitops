@@ -6,6 +6,9 @@ metadata:
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  labels:
+    app: xray-demo
+    component: image-generator
 spec:
   destination:
     namespace: openshift-gitops
