@@ -1,15 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ./odh/odh-application.yaml
-  - ./openshift-gitops/openshift-gitops-application.yaml
-  - ./openshift-operators/openshift-operators-application.yaml
-  - ./openshift-serverless/openshift-serverless-application.yaml
-  - ./openshift-storage/openshift-storage-application.yaml
-  - ./xray-demo/common/common-application.yaml
-  - ./xray-demo/kafka/kafka-application.yaml
-  - ./xray-demo/helper-db/helper-db-application.yaml
-  - ./xray-demo/bucket-helper/bucket-helper-application.yaml
-  - ./xray-demo/image-server/image-server-application.yaml
-  - ./xray-demo/image-generator/image-generator-application.yaml
-
+  - ./odh/argocd/odh-application.yaml
+  - ./openshift-gitops/argocd/openshift-gitops-application.yaml
+  - ./openshift-operators/argocd/openshift-operators-application.yaml
+  - ./openshift-serverless/argocd/openshift-serverless-application.yaml
+  - ./openshift-storage/argocd/openshift-storage-application.yaml
+  - ./xray-demo/common/argocd/common-application.yaml
+  - ./xray-demo/kafka/argocd/kafka-application.yaml
+  - ./xray-demo/helper-db/argocd/helper-db-application.yaml
+  - ./xray-demo/bucket-helper/argocd/bucket-helper-application.yaml
+  - ./xray-demo/image-server/argocd/image-server-application.yaml
+  - ./xray-demo/image-generator/argocd/image-generator-application.yaml
+  - ./xray-demo/risk-assessment/argocd/risk-assessment-application.yaml
