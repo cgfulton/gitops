@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: image-server
+  name: xray-demo-image-server
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
