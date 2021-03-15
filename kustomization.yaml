@@ -13,3 +13,4 @@ resources:
   - ./xray-demo/image-server/argocd/image-server-application.yaml
   - ./xray-demo/image-generator/argocd/image-generator-application.yaml
   - ./xray-demo/risk-assessment/argocd/risk-assessment-application.yaml
+  - ./xray-demo/grafana/argocd/grafana-application.yaml
