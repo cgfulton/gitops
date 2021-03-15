@@ -11,3 +11,5 @@ resources:
   - ./xray-demo/helper-db/helper-db-application.yaml
   - ./xray-demo/bucket-helper/bucket-helper-application.yaml
   - ./xray-demo/image-server/image-server-application.yaml
+  - ./xray-demo/image-generator/image-generator-application.yaml
+

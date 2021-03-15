@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: xray-source-config
+data:
+  xray-s3-source: 'https://s3.us-east-1.amazonaws.com/com.redhat.csds.guimou.xray-source'

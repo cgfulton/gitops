@@ -1,5 +1,5 @@
 resources:
-- common-buckets-configmap.yaml
-- common-namespace.yaml
-- common-s3-secret.yaml
-- common-service-point-configmap.yaml
+- buckets-configmap.yaml
+- xray-demo-ns.yaml
+- s3-secret.yaml
+- service-point-configmap.yaml
