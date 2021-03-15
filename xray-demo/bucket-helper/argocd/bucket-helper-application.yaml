@@ -11,7 +11,7 @@ metadata:
     component: bucket-helper
 spec:
   destination:
-    namespace: openshift-gitops
+    namespace: xray-demo
     server: https://kubernetes.default.svc
   project: default
   source:

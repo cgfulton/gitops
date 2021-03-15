@@ -2,13 +2,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: xray-demo-grafana
+  name: xray-demo-kogito
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
     app: xray-demo
-    component: grafana
+    component: kogito
 spec:
   destination:
     namespace: xray-demo
@@ -17,7 +17,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/grafana/resources
+    path: xray-demo/kogito/resources
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
