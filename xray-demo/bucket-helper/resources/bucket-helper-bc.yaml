@@ -2,6 +2,7 @@ kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
   name: bucket-helper
+  namespace: xray-demo
 spec:
   nodeSelector: null
   output:
