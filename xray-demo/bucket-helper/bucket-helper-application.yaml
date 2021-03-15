@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: xray-demo-bitbucket-helper
+  name: xray-demo-bucket-helper
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
