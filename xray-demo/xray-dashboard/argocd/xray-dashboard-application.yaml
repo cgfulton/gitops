@@ -1,0 +1,33 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: xray-dashboard
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    app: xray-demo
+    component: xray-dashboard
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: xray-demo/xray-dashboard/resources
+    repoURL: https://github.com/cgfulton/gitops.git
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+
+  syncPolicy:
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
