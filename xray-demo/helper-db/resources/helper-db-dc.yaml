@@ -93,7 +93,8 @@ spec:
               mountPath: /var/lib/mysql/data
           terminationMessagePolicy: File
           image: >-
-            image-registry.openshift-image-registry.svc:5000/openshift/mariadb:10.2
+            docker.io/centos/mariadb-102-centos7
+#            image-registry.openshift-image-registry.svc:5000/openshift/mariadb:10.2
       volumes:
         - name: xraylabdb-data
           persistentVolumeClaim:
