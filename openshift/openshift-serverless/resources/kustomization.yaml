@@ -1,4 +1,7 @@
 resources:
-  - openshift-serverless-namespace.yaml
-  - openshift-serverless-operator-group.yaml
-  - openshift-serverless-subscription.yaml
+- knative-eventing-namespace.yaml
+- knative-serving-namespace.yaml
+- knative_eventing.yaml
+- knative_serving.yaml
+- serverless-namespace.yaml
+- serverless-operator-group.yaml
