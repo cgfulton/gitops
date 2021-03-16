@@ -1,3 +1,6 @@
 apiVersion: v2
 name: xray-dashboard
 version: 0.1
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"

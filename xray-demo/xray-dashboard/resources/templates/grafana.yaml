@@ -2,6 +2,9 @@ apiVersion: integreatly.org/v1alpha1
 kind: Grafana
 metadata:
   name: xray-grafana
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   ingress:
     enabled: true

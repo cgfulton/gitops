@@ -5,6 +5,9 @@ metadata:
     app: grafana
   name: xraylab-images-dashboard
   uid: lastimagesdashboard
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   json: |
     {
