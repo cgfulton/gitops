@@ -21,6 +21,7 @@ spec:
       storage: 50Gi
   storageClassName: ocs-storagecluster-ceph-rbd
   volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -46,6 +47,7 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -71,6 +73,7 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -96,6 +99,7 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -124,12 +128,7 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
-status:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
-  phase: Bound
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -158,12 +157,7 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
-status:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
-  phase: Bound
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -192,9 +186,4 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
-status:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
-  phase: Bound
+  persistentVolumeReclaimPolicy: Delete
