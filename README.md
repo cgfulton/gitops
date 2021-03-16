@@ -32,7 +32,7 @@ oc get secret argocd-cluster-cluster -n openshift-gitops -ojsonpath='{.data.admi
 
 Get the Argo CD route:
 ```console
-oc get route argocd-cluster-server
+oc get route argocd-cluster-server -n openshift-gitops
 ```
 
 Log into Argo CD with `admin` username and the password retrieved from the previous step.
