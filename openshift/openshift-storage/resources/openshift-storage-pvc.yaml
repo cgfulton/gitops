@@ -8,7 +8,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
   finalizers:
     - kubernetes.io/pvc-protection
-  name: ocs-storagecluster-ceph-rbd
+  name: db-noobaa
   namespace: openshift-storage
 spec:
   accessModes:
@@ -28,7 +28,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
   finalizers:
     - kubernetes.io/pvc-protection
-  name: ocs-deviceset
+  name: gp2
   namespace: openshift-storage
 spec:
   accessModes:
@@ -38,3 +38,31 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    argocd.argoproj.io/sync-wave: "3"
+  finalizers:
+    - kubernetes.io/pvc-protection
+  labels:
+    app: rook-ceph-mon
+  name: rook-ceph-mon
+  namespace: openshift-storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: gp2
+  volumeMode: Filesystem
+status:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  phase: Bound
