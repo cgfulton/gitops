@@ -21,13 +21,16 @@ kustomize build https://github.com/cgfulton/gitops/openshift-gitops/resources?re
 Elevate `argocd-cluster-argocd-application-controller` to cluster-admin in the xray-demo namespace:
 ```console
 oc adm policy add-cluster-role-to-user cluster-admin \
-       system:serviceaccount:openshift-gitops:argocd-cluster-argocd-application-controller -n xray-demo
+       system:serviceaccount:openshift-gitops:argocd-cluster-argocd-application-controller \
+       -n xray-demo
 ```
 
 ## Log into Argo CD dashboard
 Argo CD generates an initial admin password:
 ```console
-oc get secret argocd-cluster-cluster -n openshift-gitops -ojsonpath='{.data.admin\.password}' | base64 -d
+oc get secret argocd-cluster-cluster \
+   -n openshift-gitops \
+   -ojsonpath='{.data.admin\.password}' | base64 -d
 ```
 
 Get the Argo CD route:

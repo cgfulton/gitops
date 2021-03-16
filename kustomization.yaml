@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: openshift-gitops
 resources:
   - ./odh/argocd/odh-application.yaml
-  - ./openshift-operators/argocd/openshift-operators-application.yaml
-  - ./openshift-serverless/argocd/openshift-serverless-application.yaml
-  - ./openshift-storage/argocd/openshift-storage-application.yaml
+  - ./openshift/openshift-operators/argocd/openshift-operators-application.yaml
+  - ./openshift/openshift-serverless/argocd/openshift-serverless-application.yaml
+  - ./openshift/openshift-storage/argocd/openshift-storage-application.yaml
   - ./xray-demo/common/argocd/common-application.yaml
   - ./xray-demo/kafka/argocd/kafka-application.yaml
   - ./xray-demo/helper-db/argocd/helper-db-application.yaml

@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openshift-gitops
+  name: openshift-storage
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -14,7 +14,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: openshift-gitops/resources
+    path: openshift/openshift-storage/resources
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

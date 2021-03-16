@@ -2,19 +2,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openshift-serverless
+  name: openshift-operators
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: openshift-serverless
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       recurse: true
-    path: openshift-serverless/resources
+    path: openshift/openshift-operators/resources
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
