@@ -8,7 +8,10 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
   finalizers:
     - kubernetes.io/pvc-protection
-  name: db-noobaa
+  labels:
+    app: noobaa
+    noobaa-db: noobaa
+  name: db-noobaa-db-0
   namespace: openshift-storage
 spec:
   accessModes:
@@ -28,8 +31,63 @@ metadata:
     argocd.argoproj.io/sync-wave: "3"
   finalizers:
     - kubernetes.io/pvc-protection
-  name: gp2
+  generateName: ocs-deviceset-0-data-0-
+  labels:
+    ceph.rook.io/DeviceSet: ocs-deviceset-0
+    ceph.rook.io/DeviceSetPVCId: ocs-deviceset-0-data-0
+    ceph.rook.io/setIndex: "0"
+  name: ocs-deviceset-0
   namespace: openshift-storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Ti
+  storageClassName: gp2
+  volumeMode: Block
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    argocd.argoproj.io/sync-wave: "3"
+  generateName: ocs-deviceset-1-data-0-
+  finalizers:
+    - kubernetes.io/pvc-protection
+  name: ocs-deviceset-1
+  namespace: openshift-storage
+  labels:
+    ceph.rook.io/DeviceSet: ocs-deviceset-1
+    ceph.rook.io/DeviceSetPVCId: ocs-deviceset-1-data-0
+    ceph.rook.io/setIndex: "1"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Ti
+  storageClassName: gp2
+  volumeMode: Block
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    argocd.argoproj.io/sync-wave: "3"
+  finalizers:
+    - kubernetes.io/pvc-protection
+  generateName: ocs-deviceset-2-data-0-
+  name: ocs-deviceset-2
+  namespace: openshift-storage
+  labels:
+    ceph.rook.io/DeviceSet: ocs-deviceset-2
+    ceph.rook.io/DeviceSetPVCId: ocs-deviceset-2-data-0
+    ceph.rook.io/setIndex: "2"
 spec:
   accessModes:
     - ReadWriteOnce
@@ -50,7 +108,81 @@ metadata:
     - kubernetes.io/pvc-protection
   labels:
     app: rook-ceph-mon
-  name: rook-ceph-mon
+    ceph_daemon_id: a
+    mon: a
+    mon_canary: "true"
+    mon_cluster: openshift-storage
+    pvc_name: rook-ceph-mon-a
+    rook_cluster: openshift-storage
+  name: rook-ceph-mon-a
+  namespace: openshift-storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: gp2
+  volumeMode: Filesystem
+status:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  phase: Bound
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    argocd.argoproj.io/sync-wave: "3"
+  finalizers:
+    - kubernetes.io/pvc-protection
+  labels:
+    app: rook-ceph-mon
+    ceph_daemon_id: b
+    mon: b
+    mon_canary: "true"
+    mon_cluster: openshift-storage
+    pvc_name: rook-ceph-mon-b
+    rook_cluster: openshift-storage
+  name: rook-ceph-mon-b
+  namespace: openshift-storage
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: gp2
+  volumeMode: Filesystem
+status:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  phase: Bound
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    argocd.argoproj.io/sync-wave: "3"
+  finalizers:
+    - kubernetes.io/pvc-protection
+  labels:
+    app: rook-ceph-mon
+    ceph_daemon_id: c
+    mon: c
+    mon_canary: "true"
+    mon_cluster: openshift-storage
+    pvc_name: rook-ceph-mon-c
+    rook_cluster: openshift-storage
+  name: rook-ceph-mon-c
   namespace: openshift-storage
 spec:
   accessModes:
