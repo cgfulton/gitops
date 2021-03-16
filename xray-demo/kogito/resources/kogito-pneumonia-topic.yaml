@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta1
 kind: KafkaTopic
 metadata:
-  name: kogito-normal
+  name: kogito-pneumonia
   labels:
     strimzi.io/cluster: my-cluster
   namespace: xray-demo
