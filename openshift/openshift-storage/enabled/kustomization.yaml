@@ -6,4 +6,5 @@ resources:
 #- openshift-storage-rgw_objectstore.yaml
 - openshift-storage-subscription.yaml
 - openshift-storage-install-plan.yaml
+- openshift-storage-pvc.yaml
 
