@@ -26,18 +26,16 @@ oc adm policy add-cluster-role-to-user cluster-admin \
 ```
 
 ## Log into Argo CD dashboard
-Argo CD generates an initial admin password:
+Get the Argo CD route:
+```console
+oc get route argocd-cluster-server -n openshift-gitops
+```
+Access the generated password for the username admin:
 ```console
 oc get secret argocd-cluster-cluster \
    -n openshift-gitops \
    -ojsonpath='{.data.admin\.password}' | base64 -d
 ```
-
-Get the Argo CD route:
-```console
-oc get route argocd-cluster-server -n openshift-gitops
-```
-
 Log into Argo CD with `admin` username and the password retrieved from the previous step.
 
 ## Deploy XRay Demo
