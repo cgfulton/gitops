@@ -1,5 +1,5 @@
 resources:
-- amq-streams-subscription.yaml
-- kogito-subscription.yaml
-- odh-subscription.yaml
-- strimzi-kafka-operator-subscription.yaml
+- amq-streams-openshift-storage-subscription.yaml
+- kogito-openshift-storage-subscription.yaml
+- odh-openshift-storage-subscription.yaml
+- strimzi-kafka-operator-openshift-storage-subscription.yaml
