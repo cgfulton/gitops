@@ -15,7 +15,7 @@ oc login -u opentlc-mgr -p r3dh4t1! <url>
 
 Bootstrap the process by installing openshift-gitops:
 ```console
-kustomize build https://github.com/cgfulton/gitops/openshift-gitops/resources?ref=main | oc apply -f-
+kustomize build https://github.com/cgfulton/gitops/openshift/openshift-gitops/resources?ref=main | oc apply -f-
 ```
 
 Elevate `argocd-cluster-argocd-application-controller` to cluster-admin in the xray-demo namespace:
