@@ -39,15 +39,9 @@ oc get secret argocd-cluster-cluster \
 Log into Argo CD with `admin` username and the password retrieved from the previous step.
 
 ## Deploy XRay Demo
-
-Build and validate kustomization target from a URL:
+Build, validate, and apply the Argo CD applications:
 ```console
-kustomize build https://github.com/cgfulton/gitops.git
-```
-
-Apply resources from a URL containing kustomization.yaml:
-```console
-oc apply -k https://github.com/cgfulton/gitops.git
+kustomize build https://github.com/cgfulton/gitops.git?ref=main | oc apply -f- 
 ```
 
 Looking at the Argo CD dashboard, you would notice that XRay Demo application is deploying.
