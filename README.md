@@ -13,7 +13,7 @@ Log into OpenShift Console as a cluster admin:
 oc login -u opentlc-mgr -p r3dh4t1! <url>
 ```
 
-Bootstrap the process by installing openshift-gitops:
+Bootstrap the process by installing openshift-gitops operator:
 ```console
 kustomize build https://github.com/cgfulton/gitops/openshift/openshift-gitops/resources?ref=main | oc apply -f-
 ```
