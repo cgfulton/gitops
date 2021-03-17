@@ -21,7 +21,6 @@ spec:
       storage: 50Gi
   storageClassName: ocs-storagecluster-ceph-rbd
   volumeMode: Filesystem
-  persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -47,7 +46,6 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
-  persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -73,7 +71,6 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
-  persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -99,7 +96,6 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
-  persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -128,7 +124,6 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
-  persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -157,7 +152,6 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
-  persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -186,4 +180,3 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
-  persistentVolumeReclaimPolicy: Retain
