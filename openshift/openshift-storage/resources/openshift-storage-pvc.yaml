@@ -47,6 +47,7 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -72,6 +73,7 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -97,6 +99,7 @@ spec:
       storage: 2Ti
   storageClassName: gp2
   volumeMode: Block
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -125,6 +128,7 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -153,6 +157,7 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -181,3 +186,4 @@ spec:
       storage: 10Gi
   storageClassName: gp2
   volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Delete
