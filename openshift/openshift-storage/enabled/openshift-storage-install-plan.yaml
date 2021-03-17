@@ -3,6 +3,8 @@ kind: InstallPlan
 metadata:
   name: install # "{{ name }}"
   namespace: openshift-storage # {{ ocp4_workload_rhtr_xraylab_ocs_namespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   approval: Automatic
   approved: true

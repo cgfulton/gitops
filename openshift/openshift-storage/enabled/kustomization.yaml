@@ -3,8 +3,8 @@ resources:
 - openshift-storage-initialization.yaml
 - openshift-storage-namespace.yaml
 - openshift-storage-operator-group.yaml
-#- openshift-storage-rgw_objectstore.yaml
+- openshift-storage-rgw_objectstore.yaml
 - openshift-storage-subscription.yaml
 - openshift-storage-install-plan.yaml
-- openshift-storage-pvc.yaml
+#- openshift-storage-pvc.yaml
 
