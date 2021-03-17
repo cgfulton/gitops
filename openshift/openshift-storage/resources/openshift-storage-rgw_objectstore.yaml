@@ -6,7 +6,7 @@ items:
       name: s3a
       namespace: openshift-storage
       annotations:
-        argocd.argoproj.io/sync-wave: "3"
+        argocd.argoproj.io/sync-wave: "4"
     spec:
       dataPool:
         crushRoot: ""
