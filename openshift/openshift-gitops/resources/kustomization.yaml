@@ -1,4 +1,4 @@
 resources:
   - openshift-gitops-operator-group.yaml
-  - openshift-gitops-openshift-storage-subscription.yaml
+  - openshift-gitops-subscription.yaml
   - openshift-gitops-namespace.yaml
