@@ -21,6 +21,7 @@ spec:
       storage: 50Gi
   storageClassName: ocs-storagecluster-ceph-rbd
   volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Delete
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
