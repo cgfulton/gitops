@@ -1,6 +1,6 @@
 resources:
 - openshift-storage-cluster.yaml
-#- openshift-storage-initialization.yaml
+- openshift-storage-initialization.yaml
 - openshift-storage-namespace.yaml
 - openshift-storage-operator-group.yaml
 #- openshift-storage-rgw_objectstore.yaml
