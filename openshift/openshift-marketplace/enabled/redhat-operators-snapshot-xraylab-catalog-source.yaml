@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: redhat-operators-snapshot-xraylab
+  namespace: openshift-marketplace
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec:
+  displayName: redhat-operators-snapshot-xraylab
+  image: quay.io/gpte-devops-automation/olm_snapshot_redhat_catalog:v4.5_2020_10_01
+  sourceType: grpc

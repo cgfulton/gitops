@@ -6,9 +6,9 @@ metadata:
   name: ocs-operator
   namespace: openshift-storage
 spec:
-  channel: stable-4.6
+  channel: stable-4.5
   installPlanApproval: Automatic
   name: ocs-operator
-  source: redhat-operators
+  source: redhat-operators-snapshot-xraylab
   sourceNamespace: openshift-marketplace
-  startingCSV: ocs-operator.v4.6.3
+  startingCSV: ocs-operator.v4.5.0

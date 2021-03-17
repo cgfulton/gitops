@@ -1,0 +1,7 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: InstallPlan
+metadata:
+  name: install # "{{ name }}"
+  namespace: openshift-storage # {{ ocp4_workload_rhtr_xraylab_ocs_namespace }}
+spec:
+  approved: true
