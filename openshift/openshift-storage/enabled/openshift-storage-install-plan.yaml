@@ -4,4 +4,7 @@ metadata:
   name: install # "{{ name }}"
   namespace: openshift-storage # {{ ocp4_workload_rhtr_xraylab_ocs_namespace }}
 spec:
+  approval: Automatic
   approved: true
+  clusterServiceVersionNames:
+    - ocs-operator.v4.5.0
