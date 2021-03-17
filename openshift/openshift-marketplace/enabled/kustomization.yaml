@@ -1,2 +1,2 @@
 resources:
-- openshift-marketplace-catalog-source.yaml
+- redhat-operators-snapshot-xraylab-catalog-source.yaml
