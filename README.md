@@ -18,11 +18,11 @@ Bootstrap the process by installing openshift-gitops operator:
 kustomize build https://github.com/cgfulton/gitops/openshift/openshift-gitops/resources?ref=main | oc apply -f-
 ```
 
-Elevate `argocd-cluster-argocd-application-controller` to cluster-admin in the xray-demo namespace:
+Elevate Argo CD to cluster-admin in the xray-demo namespace:
 ```console
 oc adm policy add-cluster-role-to-user cluster-admin \
        system:serviceaccount:openshift-gitops:argocd-cluster-argocd-application-controller \
-       -n xray-demo
+       system:serviceaccount:openshift-gitops:argocd-cluster-argocd-server 
 ```
 
 ## Log into Argo CD dashboard
