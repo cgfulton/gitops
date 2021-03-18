@@ -7,13 +7,13 @@ resources:
   - ./openshift/openshift-serverless/argocd/openshift-serverless-application.yaml
   - ./openshift/openshift-marketplace/argocd/openshift-marketplace-application.yaml
   - ./openshift/openshift-storage/argocd/openshift-storage-application.yaml
-  #- ./xray-demo/common/argocd/common-application.yaml
-  #- ./xray-demo/kafka/argocd/kafka-application.yaml
-  #- ./xray-demo/helper-db/argocd/helper-db-application.yaml
-  #- ./xray-demo/bucket-helper/argocd/bucket-helper-application.yaml
-  #- ./xray-demo/image-server/argocd/image-server-application.yaml
-  #- ./xray-demo/image-generator/argocd/image-generator-application.yaml
-  #- ./xray-demo/risk-assessment/argocd/risk-assessment-application.yaml
-  #- ./xray-demo/grafana/argocd/grafana-application.yaml
-  #- ./xray-demo/kogito/argocd/kogito-application.yaml
-  #- ./xray-demo/xray-dashboard/argocd/xray-dashboard-application.yaml
+  - ./xray-demo/common/argocd/common-application.yaml
+  - ./xray-demo/kafka/argocd/kafka-application.yaml
+  - ./xray-demo/helper-db/argocd/helper-db-application.yaml
+  - ./xray-demo/bucket-helper/argocd/bucket-helper-application.yaml
+  - ./xray-demo/image-server/argocd/image-server-application.yaml
+  - ./xray-demo/image-generator/argocd/image-generator-application.yaml
+  - ./xray-demo/risk-assessment/argocd/risk-assessment-application.yaml
+  - ./xray-demo/grafana/argocd/grafana-application.yaml
+  - ./xray-demo/kogito/argocd/kogito-application.yaml
+  - ./xray-demo/xray-dashboard/argocd/xray-dashboard-application.yaml
