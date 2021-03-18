@@ -1,5 +1,4 @@
 resources:
   - buckets-configmap.yaml
-  - xray-demo-ns.yaml
   - s3-secret.yaml
   - service-point-configmap.yaml
