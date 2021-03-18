@@ -24,13 +24,22 @@ oc login -u opentlc-mgr -p r3dh4t1! <url>
 sudo su -
 ```
 
-###
-Install `Kogito`
-```sh
-oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift/openshift-operators/enabled/kogito-subscription.yaml
+
+### Add AWS S3 Secret
+```shell
+oc apply -f- <<EOF
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: xray-demo
+  name: s3-secret
+stringData:
+    AWS_ACCESS_KEY_ID: <replace_me>
+    AWS_SECRET_ACCESS_KEY: <replace_me>
+EOF
 ```
 
-E
+### Install GitOps
 Bootstrap the process by installing openshift-gitops operator:
 ```console
 kustomize build https://github.com/cgfulton/gitops/openshift/openshift-gitops/resources?ref=main | oc apply -f-
