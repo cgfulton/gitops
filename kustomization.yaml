@@ -4,8 +4,8 @@ namespace: openshift-gitops
 resources:
   - ./odh/argocd/odh-application.yaml
   - ./openshift/openshift-operators/argocd/openshift-operators-application.yaml
-  #- ./openshift/openshift-serverless/argocd/openshift-serverless-application.yaml
-  #- ./openshift/openshift-marketplace/argocd/openshift-storage-application.yaml
+  - ./openshift/openshift-serverless/argocd/openshift-serverless-application.yaml
+  - ./openshift/openshift-marketplace/argocd/openshift-storage-application.yaml
   #- ./openshift/openshift-storage/argocd/openshift-storage-application.yaml
   #- ./xray-demo/common/argocd/common-application.yaml
   #- ./xray-demo/kafka/argocd/kafka-application.yaml
