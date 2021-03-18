@@ -30,6 +30,12 @@ Install `Kogito`
 oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift/openshift-operators/enabled/kogito-subscription.yaml
 ```
 
+E
+Bootstrap the process by installing openshift-gitops operator:
+```console
+kustomize build https://github.com/cgfulton/gitops/openshift/openshift-gitops/resources?ref=main | oc apply -f-
+```
+
 Elevate Argo CD to cluster-admin in the xray-demo namespace:
 ```console
 oc adm policy add-cluster-role-to-user cluster-admin \
@@ -48,7 +54,7 @@ oc get secret argocd-cluster-cluster \
    -n openshift-gitops \
    -ojsonpath='{.data.admin\.password}' | base64 -d
 ```
-Log into Argo CD with `admin` username and the password retrieved from the previous step.
+Log into Argo CD with `admin` user and the password retrieved from the previous step.
 
 ## Deploy XRay Demo
 Build, validate, and apply the Argo CD applications:
