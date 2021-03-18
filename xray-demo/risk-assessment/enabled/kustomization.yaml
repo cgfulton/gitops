@@ -1,8 +1,8 @@
 resources:
-#  - anonymized-bucket-helper-job.yaml
-#  - anonymized-images-topic.yaml
-#  - processed-bucket-helper-job.yaml
-#  - processed-images-topic.yaml
-#  - risk-assessment-imagestream.yaml
-#  - risk-assessment-knative-service.yaml
-#  - xray-images-kafkasource.yaml
+  - anonymized-bucket-helper-job.yaml
+  - anonymized-images-topic.yaml
+  - processed-bucket-helper-job.yaml
+  - processed-images-topic.yaml
+  - risk-assessment-imagestream.yaml
+  - risk-assessment-knative-service.yaml
+  - xray-images-kafkasource.yaml
