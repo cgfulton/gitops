@@ -1,0 +1,4 @@
+resources:
+#  - openshift-gitops-operator-group.yaml
+#  - openshift-gitops-subscription.yaml
+#  - openshift-gitops-namespace.yaml

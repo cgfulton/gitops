@@ -17,7 +17,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/grafana/resources
+    path: xray-demo/grafana/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

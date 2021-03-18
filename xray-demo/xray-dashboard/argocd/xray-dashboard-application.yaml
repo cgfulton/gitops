@@ -17,7 +17,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/xray-dashboard/resources
+    path: xray-demo/xray-dashboard/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
     helm:

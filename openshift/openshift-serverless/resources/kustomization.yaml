@@ -1,4 +1,0 @@
-resources:
-  serverless-openshift-storage-subscription.yaml
-- serverless-namespace.yaml
-- serverless-operator-group.yaml

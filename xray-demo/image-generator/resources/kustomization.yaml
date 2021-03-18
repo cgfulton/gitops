@@ -1,4 +1,0 @@
-resources:
-  - image-generator-dc.yaml
-  - image-generator-imagestream.yaml
-  - xray-source-configmap.yaml

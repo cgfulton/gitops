@@ -14,7 +14,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: openshift/openshift-serverless/resources
+    path: openshift/openshift-serverless/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

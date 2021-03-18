@@ -17,7 +17,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/image-generator/resources
+    path: xray-demo/image-generator/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

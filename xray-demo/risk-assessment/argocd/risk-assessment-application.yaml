@@ -17,7 +17,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: xray-demo/risk-assessment/resources
+    path: xray-demo/risk-assessment/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
