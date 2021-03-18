@@ -16,4 +16,4 @@ resources:
   - ./xray-demo/risk-assessment/argocd/risk-assessment-application.yaml
   - ./xray-demo/grafana/argocd/grafana-application.yaml
   - ./xray-demo/kogito/argocd/kogito-application.yaml
-  - ./xray-demo/xray-dashboard/argocd/xray-dashboard-application.yaml
+#  - ./xray-demo/xray-dashboard/argocd/xray-dashboard-application.yaml
