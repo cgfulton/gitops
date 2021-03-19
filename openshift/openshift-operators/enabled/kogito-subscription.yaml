@@ -11,6 +11,6 @@ spec:
   name: kogito-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: kogito-operator.v1.2.0
+  startingCSV: kogito-operator.v1.4.0
 
 
