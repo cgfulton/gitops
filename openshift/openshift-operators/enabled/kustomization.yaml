@@ -1,4 +1,4 @@
 resources:
-  - amq-streams-subscription.yaml
-  - kogito-subscription.yaml
-  - open-data-hub-subscription.yaml
+  - amq-streams.yaml
+  - kogito.yaml
+  - open-data-hub.yaml
