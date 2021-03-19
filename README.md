@@ -1,29 +1,32 @@
 # Getting Started
 
-This repository contains a brief Getting Started guide for trying out the xray demo.
-
-* [Install Operators](#install-operators)
-* [Log into Argo CD dashboard](#log-into-argo-cd-dashboard)
-* [Configure OpenShift with Argo CD](#configure-openshift-with-argo-cd)
-* [Deploy Applications with Argo CD](#deploy-applications-with-argo-cd)
-
-
-Log into OpenShift Console as a cluster admin:
-```console
-oc login -u opentlc-mgr -p r3dh4t1! <url>
-```
-
-## Cluster Configuration
-1. Install the Kogito Operator from Operator Hub
-   > It is important to install the Kogito Operator before running the ansible scripts.
-   > Something in the ansible scripts breaks the Kogito install.
-1. SSH into your bastion host
-1. Switch to root account
-
-```sh
-sudo su -
-```
-
+### Install Operators
+1. Install Openshift Operators
+   1. amq-streams Operator
+      - InstallPlan
+      - Subscription
+   1. kogito Operator
+      - InstallPlan
+      - Subscription
+   1. opendatahub Operator
+      - InstallPlan
+      - Subscription
+1. Install Openshift Storage Operator
+   - OperatorGroup 
+   - InstallPlan
+   - Subscription  
+   - StorageCluster
+1. Install Openshift Serverless Operator
+   - OperatorGroup
+   - InstallPlan
+   - Subscription
+   - knative-eventing
+   - knative-serving
+1. Install GitOps Operator
+   - OperatorGroup
+   - InstallPlan
+   - Subscription
+ 
 
 ### Add AWS S3 Secret
 ```shell
@@ -72,3 +75,5 @@ kustomize build https://github.com/cgfulton/gitops.git?ref=main | oc apply -f-
 ```
 
 Looking at the Argo CD dashboard, you would notice that XRay Demo application is deploying.
+
+
