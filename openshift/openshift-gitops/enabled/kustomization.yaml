@@ -1,4 +1,0 @@
-resources:
-#  - openshift-gitops-operator-group.yaml
-#  - gitops-operator-subscripiton.yaml
-#  - openshift-gitops-namespace.yaml
