@@ -2,13 +2,13 @@
 
 ### Install Operators
 1. Install Openshift Operators
-   1. amq-streams Operator
+   - amq-streams Operator
       - InstallPlan
       - Subscription
-   1. kogito Operator
+   - kogito Operator
       - InstallPlan
       - Subscription
-   1. opendatahub Operator
+   - opendatahub Operator
       - InstallPlan
       - Subscription
 1. Install Openshift Storage Operator
@@ -26,8 +26,7 @@
    - OperatorGroup
    - InstallPlan
    - Subscription
- 
-
+   
 ### Add AWS S3 Secret
 ```shell
 oc apply -f- <<EOF
