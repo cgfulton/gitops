@@ -1,5 +1,5 @@
 resources:
 #  - kogito-normal-bucket-helper-job.yaml
-#]  - kogito-normal-topic.yaml
+  - kogito-normal-topic.yaml
 #  - kogito-pneumonia-bucket-helper-job.yaml
   - kogito-pneumonia-topic.yaml
