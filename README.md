@@ -16,7 +16,7 @@ EOF
 ## Install ArgoCD applications
 Bootstrap the process by installing `openshift-gitops` operator:
 ```shell
-kustomize build https://github.com/cgfulton/gitops/openshift/openshift-gitops/enabled/gitops-operator-subscription.yaml?ref=main | oc apply -f-
+apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift/openshift-operators/enabled/gitops-operator-subscripiton.yaml
 ```
 ## Make ArgoCD a cluster-admin:
 ```shell
