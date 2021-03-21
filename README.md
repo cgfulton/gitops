@@ -20,7 +20,7 @@ oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift/ope
 ```
 ## Make ArgoCD a cluster-admin:
 ```shell
-ooc adm policy add-cluster-role-to-user cluster-admin \
+oc adm policy add-cluster-role-to-user cluster-admin \
        system:serviceaccount:openshift-gitops:argocd-cluster-argocd-application-controller \
        system:serviceaccount:openshift-gitops:argocd-cluster-argocd-server 
 ```

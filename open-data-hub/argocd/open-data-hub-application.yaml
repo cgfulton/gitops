@@ -14,7 +14,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: odh/enabled
+    path: open-data-hub/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
