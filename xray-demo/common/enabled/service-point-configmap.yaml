@@ -6,5 +6,5 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 data:
-  url-external: 'https://rgw-openshift-storage.apps.23c6.sandbox448.opentlc.com' # No trailing /
+  url-external: 'https://rgw-openshift-storage.apps.727a.sandbox1343.opentlc.com' # No trailing /
   url: 'http://rook-ceph-rgw-s3a.openshift-storage.svc.cluster.local' # No trailing /

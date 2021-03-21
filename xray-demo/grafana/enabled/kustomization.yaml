@@ -3,4 +3,4 @@ resources:
 #  - grafana-rolebinding.yaml
 #  - grafana-sa.yaml
 #  - operator-group.yaml
-#  - openshift-storage-subscription.yaml
+#  - openshift-storage-grafana-operator-subscription.yaml

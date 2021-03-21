@@ -1,5 +1,5 @@
 resources:
 - openshift-storage.yaml
 - openshift-storage-operator-group.yaml
-- openshift-storage-subscription.yaml
+- openshift-storage-grafana-operator-subscription.yaml
 
