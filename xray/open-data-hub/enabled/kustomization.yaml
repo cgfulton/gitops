@@ -1,0 +1,4 @@
+resources:
+  - open-data-hub-instance.yaml
+  - open-data-hub-namespace.yaml
+  - singleuserprofile-configmap.yaml

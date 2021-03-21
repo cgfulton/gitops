@@ -1,0 +1,3 @@
+resources:
+  - buckets-configmap.yaml
+  - service-point-configmap.yaml

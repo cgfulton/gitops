@@ -1,0 +1,2 @@
+resources:
+  - ./helper-db-application.yaml

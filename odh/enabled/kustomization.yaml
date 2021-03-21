@@ -1,4 +1,0 @@
-resources:
-  - odh-instance.yaml
-  - odh-namespace.yaml
-  - singleuserprofile-configmap.yaml

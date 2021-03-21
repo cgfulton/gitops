@@ -10,40 +10,40 @@ spec:
   resources:
     mon:
       requests:
-        cpu: 1 #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_mon_cpu }}
-        memory: 2Gi #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_mon_mem }}
+        cpu: 1
+        memory: 2Gi
     mds:
       requests:
-        cpu: 3 #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_mds_cpu }}
-        memory: 8Gi #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_mds_mem }}
+        cpu: 3
+        memory: 8Gi
     mgr:
       requests:
-        cpu: 1 #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_mgr_cpu }}
-        memory: 3Gi #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_mgr_mem }}
+        cpu: 1
+        memory: 3Gi
     noobaa-core:
       requests:
-        cpu: 1 #{{ ocp4_workload_rhtr_xraylab_ocs_mcg_core_cpu }}
-        memory: 4Gi #{{ ocp4_workload_rhtr_xraylab_ocs_mcg_core_mem }}
+        cpu: 1
+        memory: 4Gi
     noobaa-db:
       requests:
-        cpu: 1  #{{ ocp4_workload_rhtr_xraylab_ocs_mcg_db_cpu }}
-        memory: 4Gi #{{ ocp4_workload_rhtr_xraylab_ocs_mcg_db_mem }}
+        cpu: 1
+        memory: 4Gi
   storageDeviceSets:
     - name: ocs-deviceset
       count: 1
       replica: 3
       resources:
         requests:
-          cpu: 2 #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_osd_cpu }}
-          memory: 5Gi #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_osd_mem }}
+          cpu: 2
+          memory: 5Gi
       placement: {}
       dataPVCTemplate:
         spec:
-          storageClassName: gp2 #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_storage_class_name }}
+          storageClassName: gp2
           accessModes:
             - ReadWriteOnce
           volumeMode: Block
           resources:
             requests:
-              storage: 2Ti #{{ ocp4_workload_rhtr_xraylab_ocs_ceph_storage_osd_size }}
+              storage: 2Ti
       portable: true

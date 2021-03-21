@@ -1,4 +1,0 @@
-resources:
-  - buckets-configmap.yaml
-  - s3-secret.yaml
-  - service-point-configmap.yaml
