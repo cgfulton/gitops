@@ -11,5 +11,4 @@ resources:
   - ./risk-assessment
   - ./grafana
   - ./kogito
-  - ./open-data-hub
   - ./xray-dashboard
