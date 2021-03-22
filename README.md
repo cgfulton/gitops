@@ -22,11 +22,14 @@ stringData:
     AWS_SECRET_ACCESS_KEY: <replace_me>
 EOF
 ```
-## Install ArgoCD applications
+
+## Install ArgoCD Applications
+
 Bootstrap the process by installing `openshift-gitops` operator:
 ```shell
 oc apply -f https://raw.githubusercontent.com/cgfulton/gitops/main/openshift/openshift-operators/manual/gitops-operator-subscripiton.yaml
 ```
+
 ## Make ArgoCD a cluster-admin:
 ```shell
 oc adm policy add-cluster-role-to-user cluster-admin \
@@ -37,10 +40,12 @@ oc adm policy add-cluster-role-to-user cluster-admin \
 ## Log into ArgoCD Dashboards
 
 ### ArgoCD Dashboard: `git-ops`
+
 #### ArgoCD Route
 ```shell
 oc get route argocd-cluster-server -n openshift-gitops
 ```
+
 #### Admin Password
 ```shell
 oc get secret argocd-cluster-cluster \
@@ -49,10 +54,12 @@ oc get secret argocd-cluster-cluster \
 ```
 
 ### ArgoCD Dashboard: `odh`
+
 #### ArgoCD Route
 ```shell
 oc get route odh-argocd-cluster -n odh
 ```
+
 #### Admin Password
 ```shell
 oc get secret odh-argocd-cluster \
@@ -66,6 +73,7 @@ oc get secret odh-argocd-cluster \
 ```shell
 oc get route xray-demo-argocd-cluster -n xray-demo
 ```
+
 #### Admin Password
 ```shell
 oc get secret xray-demo-argocd-cluster \
@@ -74,7 +82,9 @@ oc get secret xray-demo-argocd-cluster \
 ```
 
 > Log into ArgoCD with the `admin` user with password from the previous step.
+
 ## Deploy ArgoCD Applications
+
 Build, validate, and apply the Argo CD applications:
 ```shell
 kustomize build https://github.com/cgfulton/gitops.git?ref=main | oc apply -f- 

@@ -1,12 +1,32 @@
 ---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: additional-profiles
+  labels:
+    jupyterhub: singleuser-profiles
+data:
+  jupyterhub-singleuser-profiles.yaml: |-
+    profiles:
+    - name: preload repos
+      env:
+        - name: JUPYTER_PRELOAD_REPOS
+          value: https://github.com/guimou/xraylab_notebooks.git
+    - name: globals
+      resources:
+        requests:
+          memory: 500m
+          cpu: 500m
+        limits:
+          memory: 1Gi
+          cpu: 1
+---
 apiVersion: kfdef.apps.kubeflow.org/v1
 kind: KfDef
 metadata:
   annotations:
     kfctl.kubeflow.io/force-delete: 'false'
-    argocd.argoproj.io/sync-wave: "2"
   name: opendatahub
-  namespace: odh
 spec:
   applications:
     - kustomizeConfig:
@@ -36,27 +56,3 @@ spec:
     - name: manifests
       uri: 'https://github.com/opendatahub-io/odh-manifests/tarball/v0.7.0'
   version: v0.8.0
----
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: additional-profiles
-  labels:
-    jupyterhub: singleuser-profiles
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
-data:
-  jupyterhub-singleuser-profiles.yaml: |-
-    profiles:
-    - name: preload repos
-      env:
-        - name: JUPYTER_PRELOAD_REPOS
-          value: https://github.com/guimou/xraylab_notebooks.git
-    - name: globals
-      resources:
-        requests:
-          memory: 500m
-          cpu: 500m
-        limits:
-          memory: 1Gi
-          cpu: 1
