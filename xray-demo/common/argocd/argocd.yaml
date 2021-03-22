@@ -1,7 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCD
 metadata:
-  name: xray-demo
+  name: xray-demo-argocd
+  namespace: xray-demo
 spec:
   server:
     route:
