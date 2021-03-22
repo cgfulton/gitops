@@ -2,4 +2,3 @@ resources:
   - amq-streams-operator-subscription.yaml
   - kogito-operator-operator-subscription.yaml
   - opendatahub-operator-subscription.yaml
-  - grafana-operator-subscription.yaml
