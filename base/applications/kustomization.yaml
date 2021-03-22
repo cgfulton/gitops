@@ -1,3 +1,4 @@
 resources:
   - operators-application.yaml
-  - odh-applicaiton.yaml
+  - odh-application.yaml
+  - xray-demo-applicaiton.yaml
