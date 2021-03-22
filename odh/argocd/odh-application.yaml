@@ -1,30 +1,20 @@
 ---
 apiVersion: argoproj.io/v1alpha1
-kind: ArgoCD
-metadata:
-  name: xray-demo-argocd
-  namespace: xray-demo
-spec:
-  server:
-    route:
-      enabled: true
----
-apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: xray-demo-common
-  namespace: xray-demo
+  name: odh
+  namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: xray-demo
+    namespace: odh
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       recurse: true
-    path: xray-demo/common/enabled
+    path: odh/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

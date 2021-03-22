@@ -3,12 +3,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: xray-dashboard
-  namespace: xray-demo
+  namespace: openshift-gitopts
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  labels:
-    app: xray-demo
-    component: xray-dashboard
 spec:
   destination:
     namespace: xray-demo

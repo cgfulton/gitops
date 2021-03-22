@@ -1,3 +1,2 @@
 resources:
-  - ./argocd.yaml
-  - ./odh-ns.yaml
+  - ./odh-application.yaml

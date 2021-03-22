@@ -2,19 +2,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: odh
-  namespace: odh
+  name: xray-demo-common
+  namespace: openshift-gitopts
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: odh
+    namespace: xray-demo
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       recurse: true
-    path: odh/enabled
+    path: xray-demo/common/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:

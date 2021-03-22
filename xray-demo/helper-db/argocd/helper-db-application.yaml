@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: xray-demo-helper-db
-  namespace: xray-demo
+  namespace: openshift-gitopts
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
