@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - ./openshift
   - ./xray-demo
-  - ./open-data-hub
+  - ./odh

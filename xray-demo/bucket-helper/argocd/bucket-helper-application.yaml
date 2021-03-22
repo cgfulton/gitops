@@ -3,12 +3,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: xray-demo-bucket-helper
-  namespace: openshift-gitops
+  namespace: xray-demo
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  labels:
-    app: xray-demo
-    component: bucket-helper
 spec:
   destination:
     namespace: xray-demo
