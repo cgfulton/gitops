@@ -1,3 +1,4 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCD
 metadata:
@@ -7,3 +8,29 @@ spec:
   server:
     route:
       enabled: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: open-data-hub
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: odh
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: open-data-hub/enabled
+    repoURL: https://github.com/cgfulton/gitops.git
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
