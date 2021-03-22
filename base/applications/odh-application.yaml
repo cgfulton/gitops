@@ -10,7 +10,7 @@ spec:
   destination:
     namespace: odh
     server: https://kubernetes.default.svc
-  project: default
+  project: xray-demo
   source:
     directory:
       recurse: true
