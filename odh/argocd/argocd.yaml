@@ -12,7 +12,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: open-data-hub
+  name: odh
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -24,7 +24,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: open-data-hub/enabled
+    path: odh/enabled
     repoURL: https://github.com/cgfulton/gitops.git
     targetRevision: main
   syncPolicy:
