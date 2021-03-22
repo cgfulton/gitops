@@ -1,2 +1,3 @@
 resources:
-  - 01_odh.yaml
+  - odh-instance.yaml
+  - odh-profiles.yaml
