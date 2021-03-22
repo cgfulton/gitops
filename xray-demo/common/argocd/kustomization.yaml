@@ -1,2 +1,3 @@
 resources:
   - ./common-application.yaml
+  - ./argocd.yaml
