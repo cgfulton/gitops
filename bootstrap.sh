@@ -1,5 +1,30 @@
+VERSION='4.7'
+AWS_ACCESS_KEY_ID='<replace_me>'
+AWS_SECRET_ACCESS_KEY='<replace_me>'
+
 # install the openshift-gitops operator
-oc apply -k "https://raw.githubusercontent.com/cgfulton/gitops/main/overlays/4.7/operators/openshift-gitops/subscripiton.yaml"
+oc apply -k ./overlays/${VERSION}/operators/openshift-gitops/subscripiton.yaml
+
+# Create demo directory and secret
+oc apply -f- <<EOF
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: xray-demo
+spec:
+  finalizers:
+    - kubernetes
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: xray-demo
+  name: s3-secret
+stringData:
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+EOF
 
 # Make Argocd cluster admin
 oc adm policy add-cluster-role-to-user cluster-admin \
@@ -7,12 +32,11 @@ oc adm policy add-cluster-role-to-user cluster-admin \
        system:serviceaccount:openshift-gitops:argocd-cluster-argocd-server
 
 # ArgoCD Route
-oc get route odh-argocd-cluster -n odh
+oc get route odh-argocd-cluster -n openshift-gitops
 
 # Admin Password
-oc get secret odh-argocd-cluster \
-   -n odh \
+oc get secret odh-argocd-cluster argocd-cluster-cluster -n openshift-gitops \
    -ojsonpath='{.data.admin\.password}' | base64 -d
 
-# Deploy Applicaitons
-# kustomize build https://github.com/cgfulton/gitops.git?ref=main | oc apply -f-
+# Deploy Applications
+kustomize build | oc apply -f-
