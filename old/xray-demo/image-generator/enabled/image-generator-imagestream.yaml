@@ -1,0 +1,18 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: image-generator
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: latest
+      from:
+        kind: DockerImage
+        name: 'quay.io/guimou/xraylab-image-generator:rhtr_v1.4'
+      importPolicy: {}
+      referencePolicy:
+        type: Source

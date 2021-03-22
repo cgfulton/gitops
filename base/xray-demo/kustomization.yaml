@@ -1,0 +1,11 @@
+resources:
+  - ./bucket-helper
+  - ./common
+  - ./grafana
+  - ./helper-db
+  - ./image-generator
+  - ./image-server
+  - ./kafka
+  - ./kogito
+  - ./risk-assessment
+#  - ./xray-dashboard

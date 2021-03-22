@@ -1,5 +1,5 @@
 # install the openshift-gitops operator
-oc apply -k "https://raw.githubusercontent.com/cgfulton/gitops/main/openshift/openshift-operators/manual/gitops-operator-subscripiton.yaml"
+oc apply -k "https://raw.githubusercontent.com/cgfulton/gitops/main/overlays/4.7/operators/openshift-gitops/subscripiton.yaml"
 
 # Make Argocd cluster admin
 oc adm policy add-cluster-role-to-user cluster-admin \

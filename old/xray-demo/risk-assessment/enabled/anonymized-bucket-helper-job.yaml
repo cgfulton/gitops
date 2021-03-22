@@ -1,0 +1,46 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: bucket-helper-anonymized
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  selector: {}
+  template:
+    metadata:
+      name: bucket-helper-anonymized
+    spec:
+      containers:
+        - name: bucket-helper
+          image: quay.io/troyer/bucket-helper:1.0
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: s3-secret
+                  key: AWS_ACCESS_KEY_ID
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: s3-secret
+                  key: AWS_SECRET_ACCESS_KEY
+            - name: APP_S3_ENDPOINT_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: service-point
+                  key: url
+            - name: bucket_base_name
+              valueFrom:
+                configMapKeyRef:
+                  name: buckets-config
+                  key: bucket-base-name
+            - name: APP_S3_BUCKET_NAME
+              value: $(bucket_base_name)-anonymized
+            - name: APP_S3_BUCKET_PUBLIC
+              value: 'true'
+            - name: APP_S3_BUCKET_TOPIC_NAME
+              value: anoymized-images
+            - name: APP_S3_BUCKET_TOPIC_PUSH_ENDPOINT
+              value: 'kafka://my-cluster-kafka-bootstrap.xray-demo:9092'
+      restartPolicy: Never

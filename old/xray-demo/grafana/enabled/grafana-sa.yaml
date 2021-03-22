@@ -1,0 +1,7 @@
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: grafana-operator
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"

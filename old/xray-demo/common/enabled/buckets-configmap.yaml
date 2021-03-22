@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: xray-demo
+  name: buckets-config
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+data:
+  bucket-base-name: 'xray-demo'

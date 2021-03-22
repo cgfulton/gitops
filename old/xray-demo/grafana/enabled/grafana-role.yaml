@@ -1,0 +1,63 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: grafana-operator
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+rules:
+  - verbs:
+      - '*'
+    apiGroups:
+      - ''
+    resources:
+      - pods
+      - services
+      - endpoints
+      - persistentvolumeclaims
+      - events
+      - configmaps
+      - secrets
+      - serviceaccounts
+  - verbs:
+      - '*'
+    apiGroups:
+      - apps
+    resources:
+      - deployments
+      - deployments/finalizers
+      - daemonsets
+      - replicasets
+      - statefulsets
+  - verbs:
+      - '*'
+    apiGroups:
+      - route.openshift.io
+    resources:
+      - routes
+      - routes/custom-host
+  - verbs:
+      - get
+      - create
+    apiGroups:
+      - monitoring.coreos.com
+    resources:
+      - servicemonitors
+  - verbs:
+      - '*'
+    apiGroups:
+      - extensions
+    resources:
+      - ingresses
+  - verbs:
+      - '*'
+    apiGroups:
+      - integreatly.org
+    resources:
+      - grafanas
+      - grafanadashboards
+      - grafanadatasources
+      - grafanas/finalizers
+      - grafanas/status
+      - grafanadashboards/status
+      - grafanadatasources/status

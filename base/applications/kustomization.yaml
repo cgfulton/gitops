@@ -1,0 +1,3 @@
+resources:
+  - operators-application.yaml
+  - odh-applicaiton.yaml

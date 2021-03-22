@@ -1,0 +1,5 @@
+resources:
+  - grafana-role.yaml
+  - grafana-rolebinding.yaml
+  - grafana-sa.yaml
+  - grafana-operator-subscription.yaml

@@ -1,0 +1,4 @@
+resources:
+  - subscription.yaml
+  - knative-serving.yaml
+  - knative-eventing.yaml

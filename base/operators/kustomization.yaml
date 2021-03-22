@@ -1,0 +1,7 @@
+resources:
+  - ./amq-streams
+  - ./odh
+  - ./kogito
+  - ./openshift-gitops
+  - ./openshift-serverless
+  - ./openshift-storage

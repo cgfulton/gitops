@@ -1,0 +1,15 @@
+apiVersion: kafka.strimzi.io/v1beta1
+kind: KafkaTopic
+metadata:
+  name: kogito-pneumonia
+  labels:
+    strimzi.io/cluster: my-cluster
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  partitions: 5
+  replicas: 1
+  config:
+    retention.ms: 604800000
+    segment.bytes: 1073741824

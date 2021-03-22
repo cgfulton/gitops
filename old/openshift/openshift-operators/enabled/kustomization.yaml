@@ -1,0 +1,4 @@
+resources:
+  - subscription.yaml
+  - kogito-operator-operator-subscription.yaml
+  - subscription.yaml

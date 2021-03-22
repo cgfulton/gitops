@@ -1,0 +1,17 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: image-server
+  namespace: xray-demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  to:
+    kind: Service
+    name: image-server
+    weight: 100
+  port:
+    targetPort: 5000
+  tls:
+    termination: edge
+  wildcardPolicy: None

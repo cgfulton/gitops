@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: xray-demo
+  name: service-point
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+data:
+  url-external: 'https://rgw-openshift-storage.apps.727a.sandbox1343.opentlc.com' # No trailing /
+  url: 'http://rook-ceph-rgw-s3a.openshift-storage.svc.cluster.local' # No trailing /

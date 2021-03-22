@@ -1,0 +1,6 @@
+resources:
+  - image-server-dc.yaml
+  - image-server-imagestream.yaml
+  - image-server-route.yaml
+  - image-server-service.yaml
+  - xray-images-topic.yaml

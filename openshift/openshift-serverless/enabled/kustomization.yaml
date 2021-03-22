@@ -1,4 +1,0 @@
-resources:
-  - openshift-serverless.yaml
-  - knative-serving.yaml
-  - knative-eventing.yaml
