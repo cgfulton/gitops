@@ -1,9 +1,27 @@
-VERSION='4.7'
-AWS_ACCESS_KEY_ID='<replace_me>'
-AWS_SECRET_ACCESS_KEY='<replace_me>'
+#!/bin/bash
 
-read -p 'OpenShift Version: ' VERSION
-read -p 'AWS Acess Key: ' AWS_ACCESS_KEY_ID
+PS3='Select OpenShift Version: '
+options=("4.5" "4.6" "4.7")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "4.5")
+            VERSION=$opt
+            break
+            ;;
+        "4.6")
+            VERSION=$opt
+            break
+            ;;
+        "4.7")
+            VERSION=$opt
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+
+read -p 'AWS Access Key: ' AWS_ACCESS_KEY_ID
 read -sp 'AWS Secret Access Key: ' AWS_SECRET_ACCESS_KEY
 
 # install the openshift-gitops operator
