@@ -2,6 +2,10 @@ VERSION='4.7'
 AWS_ACCESS_KEY_ID='<replace_me>'
 AWS_SECRET_ACCESS_KEY='<replace_me>'
 
+read -p 'OpenShift Version: ' VERSION
+read -p 'AWS Acess Key: ' AWS_ACCESS_KEY_ID
+read -sp 'AWS Secret Access Key: ' AWS_SECRET_ACCESS_KEY
+
 # install the openshift-gitops operator
 oc apply -k ./overlays/${VERSION}/operators/openshift-gitops/subscripiton.yaml
 
