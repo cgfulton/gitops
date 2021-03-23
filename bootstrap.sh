@@ -1,18 +1,10 @@
 #!/bin/bash
 
 PS3='Select OpenShift Version: '
-options=("4.5" "4.6" "4.7")
+options=("4.7")
 select opt in "${options[@]}"
 do
     case $opt in
-        "4.5")
-            VERSION=$opt
-            break
-            ;;
-        "4.6")
-            VERSION=$opt
-            break
-            ;;
         "4.7")
             VERSION=$opt
             break
